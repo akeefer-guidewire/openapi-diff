@@ -75,7 +75,8 @@ public class ChangedSchema implements ComposedChanged {
         && missingProperties.size() == 0
         && changedProperties.values().size() == 0
         && !changeDeprecated
-        && !discriminatorPropertyChanged) {
+        && !discriminatorPropertyChanged
+        && !changeDefault) {
       return DiffResult.NO_CHANGES;
     }
     boolean compatibleForRequest = (oldSchema != null || newSchema == null);
@@ -87,6 +88,7 @@ public class ChangedSchema implements ComposedChanged {
         && !discriminatorPropertyChanged) {
       return DiffResult.COMPATIBLE;
     }
+    // TODO - AHK - Should changeDefault ever be incompatible?
     return DiffResult.INCOMPATIBLE;
   }
 }
