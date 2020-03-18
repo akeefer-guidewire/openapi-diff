@@ -4,8 +4,10 @@ import com.qdesrame.openapi.diff.model.Changed;
 import com.qdesrame.openapi.diff.model.DiffContext;
 import com.qdesrame.openapi.diff.model.DiffResult;
 import java.util.Objects;
+import lombok.Getter;
 
 // TODO - AHK - Replace with @Getter
+@Getter
 public abstract class ChangedNumericProperty<T extends Number> implements Changed {
   protected final T oldValue;
   protected final T newValue;
