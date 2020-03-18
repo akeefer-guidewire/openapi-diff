@@ -3,7 +3,6 @@ package com.qdesrame.openapi.diff.model.schema;
 import com.qdesrame.openapi.diff.model.Changed;
 import com.qdesrame.openapi.diff.model.DiffContext;
 import com.qdesrame.openapi.diff.model.DiffResult;
-
 import java.util.Objects;
 
 public class ChangedMinLength implements Changed {
