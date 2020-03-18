@@ -59,7 +59,9 @@ public class SchemaDiffResult {
         .setMinimum(new ChangedMinimum(left.getMinimum(), right.getMinimum(), context))
         .setMaximum(new ChangedMaximum(left.getMaximum(), right.getMaximum(), context))
         .setMinItems(new ChangedMinItems(left.getMinItems(), right.getMinItems(), context))
-        .setMaxItems(new ChangedMaxItems(left.getMaxItems(), right.getMaxItems(), context));
+        .setMaxItems(new ChangedMaxItems(left.getMaxItems(), right.getMaxItems(), context))
+        .setUniqueItems(
+            new ChangedUniqueItems(left.getUniqueItems(), right.getUniqueItems(), context));
 
     openApiDiff
         .getExtensionsDiff()

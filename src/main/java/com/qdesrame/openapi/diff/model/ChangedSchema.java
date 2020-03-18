@@ -39,6 +39,7 @@ public class ChangedSchema implements ComposedChanged {
   protected ChangedMaximum maximum;
   protected ChangedMinItems minItems;
   protected ChangedMaxItems maxItems;
+  protected ChangedUniqueItems uniqueItems;
   protected boolean discriminatorPropertyChanged;
   protected ChangedSchema items;
   protected ChangedOneOfSchema oneOfSchema;
@@ -70,6 +71,7 @@ public class ChangedSchema implements ComposedChanged {
                 maximum,
                 minItems,
                 maxItems,
+                uniqueItems,
                 extensions))
         .collect(Collectors.toList());
   }
