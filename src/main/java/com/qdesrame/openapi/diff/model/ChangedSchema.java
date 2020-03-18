@@ -34,6 +34,7 @@ public class ChangedSchema implements ComposedChanged {
   protected ChangedWriteOnly writeOnly;
   protected boolean changedType;
   protected ChangedMaxLength maxLength;
+  protected ChangedMinLength minLength;
   protected boolean discriminatorPropertyChanged;
   protected ChangedSchema items;
   protected ChangedOneOfSchema oneOfSchema;
@@ -60,6 +61,7 @@ public class ChangedSchema implements ComposedChanged {
                 enumeration,
                 required,
                 maxLength,
+                minLength,
                 extensions))
         .collect(Collectors.toList());
   }
