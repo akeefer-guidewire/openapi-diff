@@ -36,7 +36,9 @@ public class ChangedSchema implements ComposedChanged {
   protected ChangedMinLength minLength;
   protected ChangedMaxLength maxLength;
   protected ChangedMinimum minimum;
+  protected ChangedExclusiveMinimum exclusiveMinimum;
   protected ChangedMaximum maximum;
+  protected ChangedExclusiveMaximum exclusiveMaximum;
   protected ChangedMinItems minItems;
   protected ChangedMaxItems maxItems;
   protected ChangedUniqueItems uniqueItems;
@@ -68,7 +70,9 @@ public class ChangedSchema implements ComposedChanged {
                 minLength,
                 maxLength,
                 minimum,
+                exclusiveMinimum,
                 maximum,
+                exclusiveMaximum,
                 minItems,
                 maxItems,
                 uniqueItems,
